@@ -4,10 +4,8 @@ author: "Özgenur Şensoy"
 date: "2022-10-01"
 ---
 
-This is a template example qmd output page. You may see an example R code below.
+# \| ABOUT ME
 
-```{r}
-set.seed(1)
-vec1 <- sample(LETTERS,5)
-paste0(vec1,collapse="")
-```
+[Hello!]{style="font-size: 20px;"}
+
+I'm Özgenur Şensoy, MSc in Big Data Analytics. 
