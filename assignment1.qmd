@@ -9,3 +9,4 @@ date: "2022-10-01"
 [Hello!]{style="font-size: 20px;"}
 
 I'm Özgenur Şensoy, MSc in Big Data Analytics. 
+I graduated from the Department of Elementary Mathematics Education. Since I did not feel like I belonged there during my internships, I switched to data analytics where I could be more productive.
