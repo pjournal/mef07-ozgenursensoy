@@ -6,7 +6,31 @@ date: "2022-10-01"
 
 # \| ABOUT ME
 
-[Hello!]{style="font-size: 20px;"}
+[Hello folks!]{style="font-size: 20px;"}
 
 I'm Özgenur Şensoy, MSc in Big Data Analytics. 
-I graduated from the Department of Elementary Mathematics Education. Since I did not feel like I belonged there during my internships, I switched to data analytics where I could be more productive.
+I graduated from the Department of Elementary Mathematics Education. Since I did not feel like I belonged there during my internships, I switched to data analytics where I could be more productive. I want to put my data science skills into practice in a few companies that I dream of. In addition, I want to progress by nourishing my knowledge with courses on artificial intelligence.
+
+[![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/özgenurşensoy/) 
+
+# \| Data Visualization
+
+### YouTube Channel \| The open-source data science company for the individual, team and enterprise.
+
+::: {style="text-align: center;"}
+<iframe width="680" height="430" src="https://www.youtube.com/watch?v=5zJC0AB-UK8&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=21" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
+:::
+
+[*Teaching R online with RStudio Cloud*](https://www.youtube.com/watch?v=5zJC0AB-UK8&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=21)
+
+I chose to watch the video titled **"Data visualization and plotting with Shiny for Python || Carson Sievert || RStudio"** The video covers how to create interactive data visualization using Shiny, Python, and Pandas. Here are the key topics:
+
+**Layout and Slider:** At the beginning of the video, we learn how to lay out a user interface and add interactive elements such as sliders using Shiny. This allows users to interact with data or graphs.
+**Reactive Calculations :**The term "Reactive calculations" refers to the ability of users to make calculations based on data. For example, you can create a structure where the calculations are automatically updated when a user changes the slider.
+**Render Plot:** Specifies how to render and update graphics or plots to be displayed to the user. Data-driven charts can refresh automatically as users interact.
+**Pandas Plotting:** Pandas is a widely used library for data analysis and manipulation in Python. The video could possibly also cover how to analyze data using DataFrames and how to use Pandas' plotting capabilities.
+
+The video explains how you can create an app with an interactive graphic. This implementation seems to change the number of bars in the calculated histogram when you change a slider. The video shows you how to layout such interactive applications using "layout sidebar", a subpackage of Shiny. This allows users to make the data and chart more interactive. Additionally, "reactive calculations" and "render plot" topics are also discussed in the video. "Reactive calculations" appears to be a feature that defines how calculations can be performed based on input values. "Render plot" explains how to create and display graphics. This shows how you can create different types of plots interactively using plot libraries such as Matplotlib. The video also provides examples using different graphics packages, for example showing how packages such as Seaborn, Plotnine, Pandas, Hollowvies, xarray and geopandas can be used. It looks like this video might offer useful information to those interested in data visualization using Shiny and Python.
+
+----
+
