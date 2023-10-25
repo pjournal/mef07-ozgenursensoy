@@ -13,9 +13,9 @@ I graduated from the Department of Elementary Mathematics Education. Since I did
 
 [![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/özgenurşensoy/) 
 
-# \| Data Visualization
+# \| Yotube Video 
 
-### YouTube Channel \| The open-source data science company for the individual, team and enterprise.
+### Data Visualization
 
 ::: {style="text-align: center;"}
 <iframe width="680" height="430" src="https://www.youtube.com/watch?v=5zJC0AB-UK8&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=21" frameborder="0" allowfullscreen style="display: inline-block;"></iframe>
