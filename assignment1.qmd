@@ -1,11 +1,5 @@
 ---
 title: "Assignment 1"
-format: html
-editor: visual
----
-
----
-title: "Assignment 1"
 author: "Özgenur Şensoy"
 date: "2022-10-01"
 ---
@@ -16,15 +10,17 @@ date: "2022-10-01"
 
 I'm Özgenur Şensoy, MSc in Big Data Analytics. I graduated from MEF University from the Department of Elementary Mathematics Education. Since I did not feel like I belonged there during my internships, I switched to data analytics where I could be more productive. I want to put my data science skills into practice in a few companies that I dream of. In addition, I want to progress by nourishing my knowledge with courses on artificial intelligence.
 
+
 [(https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/özgenurşensoy/)
+
+[LinkedIn Profile](https://www.linkedin.com/in/özgenurşensoy/)
+
 
 # \| Yotube Video
 
 ### Data Visualization
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5zJC0AB-UK8?si=wTYh_CmeJ242Af2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-
-</iframe>
 
 </iframe>
 
@@ -42,7 +38,39 @@ I chose to watch the video titled **"Data visualization and plotting with Shiny 
 
 The video explains how you can create an app with an interactive graphic. This implementation seems to change the number of bars in the calculated histogram when you change a slider. The video shows you how to layout such interactive applications using "layout sidebar", a subpackage of Shiny. This allows users to make the data and chart more interactive. Additionally, "reactive calculations" and "render plot" topics are also discussed in the video. "Reactive calculations" appears to be a feature that defines how calculations can be performed based on input values. "Render plot" explains how to create and display graphics. This shows how you can create different types of plots interactively using plot libraries such as Matplotlib. The video also provides examples using different graphics packages, for example showing how packages such as Seaborn, Plotnine, Pandas, Hollowvies, xarray and geopandas can be used. It looks like this video might offer useful information to those interested in data visualization using Shiny and Python.
 
-------------------------------------------------------------------------
+
+
+# \| Dataset (2022-23 Salaries of NBA Players) 
+
+NBA players' salaries dataset is the data set containing the salaries of all NBA players. Contains salary, position, team, and age information for each player. Additionally, it provides details on the minutes played by players and their success percentage per period.
+
+**Key Features:**
+
+- Player Information
+
+- Per Game Statistics
+
+- Shooting Efficiency
+
+- Advanced Statistics
+
+- Salaries
+
+
+**Data Source:** This dataset merges player per-game and advanced statistics for the NBA's 2022-23 season with player salary data, creating a comprehensive resource for understanding the performance and financial aspects of professional basketball players. The dataset is the result of web scraping player salary information from Hoopshype, and downloading traditional per-game and advanced statistics from Basketball Reference.
+
+**Potential Uses:**
+
+- Player Performance Analysis 
+
+- Team Budgeting and Strategy
+
+- Player Earnings Insights
+
+- Data-Driven Decisions
+
+**Access:** For access [official website](https://www.kaggle.com/datasets/jamiewelsh2/nba-player-salaries-2022-23-season/data).
+
 # \| Three R Posts
 
 
@@ -56,6 +84,7 @@ This R data visualization guide provides an overview of the various techniques, 
 This analysis focuses on recruiting data, specifically in the sales department, and examines various recruitment channels. It involves loading the dataset, giving an overview of the data, and identifying the sources used for recruitment. Attrition rates are also assessed for each recruitment source to pinpoint those with high and low turnover. The results are presented through bar charts for easy interpretation.
 
 To evaluate the effectiveness of each recruitment channel in producing top salespeople, we calculate the average sales quota attainment for hires from each source.
+
 
 ```{r}
 # Find the average sales quota attainment for each recruiting source
@@ -71,20 +100,35 @@ avg_sales
 [*For More*](https://rpubs.com/alifrady/HR_analysis)
 
 
+
+#Find the average sales quota attainment for each recruiting source
+avg_sales <- recruitment %>%
+  
+  group_by(recruiting_source) %>% 
+  
+  summarize(avg_sales_quota_pct = mean(sales_quota_pct)) 
+  
+#Display the result 
+avg_sales
+
+
+[*For More*](https://rpubs.com/alifrady/HR_analysis)
+
 ### 3- Default Parameter Value
 The following example shows how to use a default parameter value.
 
 If we call the function without an argument, it uses the default value:
+
 ```{r}
-Example
+
 my_function <- function(country = "Norway") {
-  paste("I am from", country)
-}
+  paste("I am from", country)}
 
 my_function("Sweden")
 my_function("India")
 my_function() # will get the default value, which is Norway
 my_function("USA")
+
 ```
 
 [*For More*](https://www.w3schools.com/r/r_functions.asp)
