@@ -3,11 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "[STUDENT/GROUP NAME] Progress Journal"
+  title: "Özgenur Şensoy Progress Journal"
   repo-url: https://github.com/pjournal/gh-pages-quarto-template
   chapters:
     - index.qmd
     - assignment1.qmd
+    - InClass1.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]
@@ -15,6 +16,4 @@ book:
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
 
