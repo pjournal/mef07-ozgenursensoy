@@ -1,0 +1,31 @@
+---
+title: "InClass1"
+author: "Özgenur Şensoy"
+date: "2023.10.26"
+editor: visual
+---
+
+### Air Quality
+
+```{r}
+library(dplyr)
+air_data <- as_tibble(airquality)
+head(air_data)
+```
+
+```{r}
+filtered_data <- air_data %>% filter(Ozone > 31)
+print(filtered_data)
+```
+
+```{r}
+summary_data <- air_data %>%
+  summarise(Avg_Ozone = mean(Ozone, na.rm = TRUE))
+print(summary_data)
+```
+```{r}
+arranged_data <- air_data %>%
+  arrange(Wind)
+print(arranged_data)
+```
+

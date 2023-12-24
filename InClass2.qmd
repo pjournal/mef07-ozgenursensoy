@@ -1,0 +1,12 @@
+---
+title: "InClass2"
+format: html
+editor: visual
+---
+
+---
+title: "InClass2"
+author: "Özgenur Şensoy"
+date: "2022-11-09"
+---
+
