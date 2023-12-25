@@ -1,12 +1,32 @@
 ---
 title: "InClass2"
-format: html
 editor: visual
----
-
----
-title: "InClass2"
 author: "Özgenur Şensoy"
-date: "2022-11-09"
+date: "2023-11-09"
 ---
 
+### Air Quality
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+ggplot(airquality, aes(x = Wind, y = Ozone, color = factor(Month))) +
+  geom_point(size = 3) +
+  labs(title = "Scatter Plot of Wind Speed vs. Ozone Concentration by Month",
+       x = "Wind Speed",
+       y = "Ozone Concentration",
+       color = "Month") +
+  theme_minimal()
+```
+
+```{r}
+ggplot(airquality, aes(x = factor(Month), y = Ozone, fill = factor(Month))) +
+  geom_bar(stat = "summary", fun = "mean", position = "dodge", color = "black") +
+  labs(title = "Average Ozone Concentration by Month",
+       x = "Month",
+       y = "Average Ozone Concentration") +
+  theme_minimal()
+```
