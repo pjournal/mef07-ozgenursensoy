@@ -1,0 +1,18 @@
+---
+title: "Shiny App"
+editor: visual
+---
+
+  ## **Shiny Application about Air Quality**
+  
+  
+  ## **Link to Shinyapps.io**
+  
+  [My Shiny App](https://ozgenursensoy.shinyapps.io/Shiny/)
+
+## **Command Line**
+
+```         
+shiny::runGitHub(repo = "pjournal//mef07-ozgenursensoy",subdir="Shiny/app.R")
+```
+---
