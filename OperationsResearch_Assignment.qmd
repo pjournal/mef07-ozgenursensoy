@@ -5,19 +5,19 @@ editor: visual
 
 # EasyPark's Parking Optimization with Gurobi
 
-## Business Context
+**Business Context**
 
 EasyPark tackles urban traffic congestion and driver frustration by optimizing parking. With 30% of city vehicles searching for parking, EasyPark enhances the urban parking experience using mathematical optimization.
 
-## **Problem**
+\*\*Problem\*\*
 
 Cruising for parking worsens congestion, wastes time and fuel, and increases carbon emissions. Traditional parking methods fail to address drivers' challenges, causing delays and urban gridlock.
 
-## **Solution**
+**Solution**
 
 EasyPark's innovative solution involves a mathematical optimization model powered by Gurobi, focusing on real-time data inputs to efficiently guide users to available parking spots.
 
-## **How It Works**
+**How It Works**
 
 *Data Collection:* EasyPark uses machine learning for comprehensive data, including historical transactions, mapping, GIS, user transactions, and routes.
 
@@ -25,10 +25,10 @@ EasyPark's innovative solution involves a mathematical optimization model powere
 
 *Mixed-Integer Programming (MIP):* EasyPark employs an MIP model to find the best route, minimizing travel time based on the user's destination and spot probabilities.
 
-## **Personal Commentary**
+**Personal Commentary**
 
 EasyPark's innovative approach not only reduces parking search time but also promotes a sustainable urban lifestyle. Using advanced technology like Gurobi, it showcases smart solutions in urban planning, impacting individual convenience with dynamic pricing and aiding in optimal capacity planning. This solution acts as a catalyst, enhancing city life, improving traffic flow, and meeting the demands of modern urban living.
 
-## Reference
+**Reference**
 
 [*https://www.gurobi.com/case_studies/easy-park-urban-parking-optimization/*](https://www.gurobi.com/case_studies/easy-park-urban-parking-optimization/)
