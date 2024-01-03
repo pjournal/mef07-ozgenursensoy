@@ -13,7 +13,7 @@ Each section is an assignment or an individual work.
 + [Özgenur Şensoy](Özgenur Şensoy's Progress Journal URL with https://github.com/pjournal/mef07-ozgenursensoy)  
 + [Zelha Tunç Pekkan](Zelha Tunç Pekkan's Progress Journal URL with https://github.com/pjournal/mef07-zelha24)
 + [Sümeyye Nida Dönmez](Member 3's Progress Journal URL with https://github.com/pjournal/mef07-nida-91)
-+ [Cem Deniz Sayıner](Member 3's Progress Journal URL with 
++ [Cem Deniz Sayıner](Member 3's Progress Journal URL with https://github.com/pjournal/mef07-cmdnz)
 
 # Group Project Details
 
