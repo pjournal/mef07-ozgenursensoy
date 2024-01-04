@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Ozgenur Sensoy Progress Journal",
     "section": "",
-    "text": "Introduction\n\nThis progress journal covers [Özgenur Şensoy / PROJECT GROUP NAME haven’t decided yet]’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
+    "text": "Introduction\n\nThis progress journal covers [Özgenur Şensoy / SUn Forest]’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
   },
   {
     "objectID": "assignment1.html",
@@ -28,59 +28,17 @@
     "text": "3.0.1 Air Quality\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(ggplot2)\n\n\nggplot(airquality, aes(x = Wind, y = Ozone, color = factor(Month))) +\n  geom_point(size = 3) +\n  labs(title = \"Scatter Plot of Wind Speed vs. Ozone Concentration by Month\",\n       x = \"Wind Speed\",\n       y = \"Ozone Concentration\",\n       color = \"Month\") +\n  theme_minimal()\n\nWarning: Removed 37 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\nggplot(airquality, aes(x = factor(Month), y = Ozone, fill = factor(Month))) +\n  geom_bar(stat = \"summary\", fun = \"mean\", position = \"dodge\", color = \"black\") +\n  labs(title = \"Average Ozone Concentration by Month\",\n       x = \"Month\",\n       y = \"Average Ozone Concentration\") +\n  theme_minimal()\n\nWarning: Removed 37 rows containing non-finite values (`stat_summary()`)."
   },
   {
-    "objectID": "ShinyApp.html#command-line",
-    "href": "ShinyApp.html#command-line",
+    "objectID": "ShinyApp.html",
+    "href": "ShinyApp.html",
     "title": "4  Shiny App",
-    "section": "4.1 Command Line",
-    "text": "4.1 Command Line\nshiny::runGitHub(repo = \"pjournal//mef07-ozgenursensoy\",subdir=\"Shiny/app.R\")"
+    "section": "",
+    "text": "## Shiny Application about Air Quality\n## Link to Shinyapps.io\nMy Shiny App"
   },
   {
     "objectID": "OperationsResearch_Assignment.html",
     "href": "OperationsResearch_Assignment.html",
     "title": "5  Operations_Research",
     "section": "",
-    "text": "6 EasyPark’s Parking Optimization with Gurobi"
-  },
-  {
-    "objectID": "OperationsResearch_Assignment.html#business-context",
-    "href": "OperationsResearch_Assignment.html#business-context",
-    "title": "5  Operations_Research",
-    "section": "6.1 Business Context",
-    "text": "6.1 Business Context\nEasyPark tackles urban traffic congestion and driver frustration by optimizing parking. With 30% of city vehicles searching for parking, EasyPark enhances the urban parking experience using mathematical optimization."
-  },
-  {
-    "objectID": "OperationsResearch_Assignment.html#problem",
-    "href": "OperationsResearch_Assignment.html#problem",
-    "title": "5  Operations_Research",
-    "section": "6.2 Problem",
-    "text": "6.2 Problem\nCruising for parking worsens congestion, wastes time and fuel, and increases carbon emissions. Traditional parking methods fail to address drivers’ challenges, causing delays and urban gridlock."
-  },
-  {
-    "objectID": "OperationsResearch_Assignment.html#solution",
-    "href": "OperationsResearch_Assignment.html#solution",
-    "title": "5  Operations_Research",
-    "section": "6.3 Solution",
-    "text": "6.3 Solution\nEasyPark’s innovative solution involves a mathematical optimization model powered by Gurobi, focusing on real-time data inputs to efficiently guide users to available parking spots."
-  },
-  {
-    "objectID": "OperationsResearch_Assignment.html#how-it-works",
-    "href": "OperationsResearch_Assignment.html#how-it-works",
-    "title": "5  Operations_Research",
-    "section": "6.4 How It Works",
-    "text": "6.4 How It Works\nData Collection: EasyPark uses machine learning for comprehensive data, including historical transactions, mapping, GIS, user transactions, and routes.\nProbability Estimation: Bayesian models estimate the probability of finding parking by time and city block using collected data.\nMixed-Integer Programming (MIP): EasyPark employs an MIP model to find the best route, minimizing travel time based on the user’s destination and spot probabilities."
-  },
-  {
-    "objectID": "OperationsResearch_Assignment.html#personal-commentary",
-    "href": "OperationsResearch_Assignment.html#personal-commentary",
-    "title": "5  Operations_Research",
-    "section": "6.5 Personal Commentary",
-    "text": "6.5 Personal Commentary\nEasyPark’s innovative approach not only reduces parking search time but also promotes a sustainable urban lifestyle. Using advanced technology like Gurobi, it showcases smart solutions in urban planning, impacting individual convenience with dynamic pricing and aiding in optimal capacity planning. This solution acts as a catalyst, enhancing city life, improving traffic flow, and meeting the demands of modern urban living."
-  },
-  {
-    "objectID": "OperationsResearch_Assignment.html#reference",
-    "href": "OperationsResearch_Assignment.html#reference",
-    "title": "5  Operations_Research",
-    "section": "6.6 Reference",
-    "text": "6.6 Reference\nhttps://www.gurobi.com/case_studies/easy-park-urban-parking-optimization/"
+    "text": "6 EasyPark’s Parking Optimization with Gurobi\nBusiness Context\nEasyPark tackles urban traffic congestion and driver frustration by optimizing parking. With 30% of city vehicles searching for parking, EasyPark enhances the urban parking experience using mathematical optimization.\n**Problem**\nCruising for parking worsens congestion, wastes time and fuel, and increases carbon emissions. Traditional parking methods fail to address drivers’ challenges, causing delays and urban gridlock.\nSolution\nEasyPark’s innovative solution involves a mathematical optimization model powered by Gurobi, focusing on real-time data inputs to efficiently guide users to available parking spots.\nHow It Works\nData Collection: EasyPark uses machine learning for comprehensive data, including historical transactions, mapping, GIS, user transactions, and routes.\nProbability Estimation: Bayesian models estimate the probability of finding parking by time and city block using collected data.\nMixed-Integer Programming (MIP): EasyPark employs an MIP model to find the best route, minimizing travel time based on the user’s destination and spot probabilities.\nPersonal Commentary\nEasyPark’s innovative approach not only reduces parking search time but also promotes a sustainable urban lifestyle. Using advanced technology like Gurobi, it showcases smart solutions in urban planning, impacting individual convenience with dynamic pricing and aiding in optimal capacity planning. This solution acts as a catalyst, enhancing city life, improving traffic flow, and meeting the demands of modern urban living.\nReference\nhttps://www.gurobi.com/case_studies/easy-park-urban-parking-optimization/"
   }
 ]
