@@ -1,0 +1,36 @@
+```{r}
+
+santral_isimleri <- c("ATATÜRK HES", "KARAKAYA HES", "AFŞİN ELBİSTAN-B TS", "KEBAN HES", "ILISU BARAJI ve HES", 
+                   "SOMA-B TERMİK SANTRAL", "ENERJISA BANDIRMA SANTRALI", "ACWA POWER KIRIKKALE DGKÇS", 
+                   "Erzin DGKÇ Santrali", "ANKARA DGKÇS", "ADAPAZARI DGKÇS", "İSTANBUL FUEL OİL VE DOĞALGAZ KOMBİNE ÇEVRİM SANTRALİ (B)", 
+                   "GEBZE DGKÇS", "BURSA DGKÇS", "CENAL TES", "İSKENDERUN İTHAL KÖMÜR SANTRALI", "ÇAYIRHAN TES", "HAMİTABAT DG", 
+                   "BANDIRMA II DGKÇS", "Bekirli Termik Santralı", "SOMA KOLİN TERMİK SANTRALİ(Linyit)", 
+                   "TEKİRDAĞ DGKÇS_A(Doğalgaz/Motorin)", "ÇETİN BARAJI ve HES", "YENİKÖY TES", "KAZAN DOĞALGAZ KOJ.SANT.", 
+                   "İZDEMİR TES", "AFŞİN ELBİSTAN A TERMİK SANTRALİ", "EREN ENERJİ TERMİK SANTRALİ ZONGULDAK", 
+                   "SEYİTÖMER TES", "SİLOPİ TES", "KEMERKÖY ÜRETİM TESİSİ", "YATAĞAN TERMİK SANTRALİ", 
+                   "ORHANELİ TES", "KAVŞAK BENDİ ve HES", "TUNÇBİLEK TES", "Çatalağzı Termik Santralı", 
+                   "MANİSA OSB ÜRT.SANT.", "ENERJİSA TUFANBEYLİ SANTRALI", "YUNUS EMRE TERMİK SANTRALİ", 
+                   "BALIKESİR RES", "BOLU-GÖYNÜK ENERJİ SANTRALİ")
+
+kurulu_guc <- c(2405, 1800, 1440, 1330, 1208.6, 990, 930.8, 927.4, 904, 833.2, 818, 816, 815.5, 716, 660, 654, 620, 610, 607.2,600, 510, 478, 420.1, 420, 379, 370, 338.75, 335.3333333, 334.0909091, 243, 224.0275862, 210, 210, 191.28, 
+184.7674419, 157.34, 150.08, 150, 145, 142.5, 135)
+
+kapasite <- c(1650, 840, 216.7307692, 904.5, 162.8813559, 404.4444444, 442, 247.2142857, 430.5, 281.8636364, 418, 
+                   453.3214286, 414.0625, 254.3333333, 465.6, 238.8888889, 250.2941176, 0, 465.5, 381.8965517, 365.1666667, 
+                   0, 209.7, 261.5714286, 0, 99.2, 0, 244.2666667, 241.5681818, 48, 174.5862069, 128.9090909, 89.77142857, 
+                   103, 46.41860465, 64.90697674, 37.17647059, 109, 27.72727273, 97.42857143, 62.02173913)
+
+
+veri <- data.frame(SantralIsmi = santral_isimleri, KuruluGuc = kurulu_guc, Kapasite = kapasite)
+
+
+library(ggplot2)
+ggplot(veri, aes(x = SantralIsmi)) +
+  geom_bar(aes(y = KuruluGuc), stat = "identity", fill = "blue", position = "dodge", width = 0.35) +
+  geom_bar(aes(y = Kapasite), stat = "identity", fill = "green", position = "dodge", width = 0.35) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "Santral İsimleri, İşletmedeki Kurulu Güç ve Olay Sırasında Kapasite", x = "Santral İsmi", y = "Değer") +
+  scale_fill_manual(values = c("blue", "green"), name = "Değer Tipi", labels = c("İşletmedeki Kurulu Güç", "Olay Sırasında Kapasite"))
+
+```
+

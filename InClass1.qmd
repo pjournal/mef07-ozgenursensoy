@@ -23,9 +23,9 @@ summary_data <- air_data %>%
   summarise(Avg_Ozone = mean(Ozone, na.rm = TRUE))
 print(summary_data)
 ```
+
 ```{r}
 arranged_data <- air_data %>%
   arrange(Wind)
 print(arranged_data)
 ```
-

@@ -1,0 +1,149 @@
+---
+title: "Final Project"
+date: "08.01.2024"
+output: pdf_document
+author: "Özgenur Şensoy"
+---
+
+### **Part 1** 
+**Q1** 
+
+AI regulation requires a delicate balance. Overly strict rules hinder innovation, while a lack of regulations risks chaos. High-risk areas like medical diagnosis face stringent scrutiny, ensuring citizen protection, while low-risk applications have lighter burdens, fostering progress. Though incumbents may benefit from navigating complex regulations, startups can thrive in less-regulated spaces. Effective regulations address ethical concerns and prevent misuse, creating a level playing field. Encouraging transparency, open-source AI, and investing in AI literacy further empower users and developers. While embracing ambiguity initially, a comprehensive approach ensures a sustainable, inclusive AI future by building trust, promoting collaboration, and attracting investment.
+
+**Q2**
+
+1- Define Scope and Stakeholders: Clearly outline project boundaries and gather stakeholder expectations.
+
+2- Understand Current Process: Gather requirements by interviewing team members and observing the manual process.
+
+3- Data Collection, Cleaning, and EDA: Collect and clean relevant data from Excel sheets, and perform exploratory data analysis.
+
+4- Define Metrics and Model Development: Establish key performance indicators, select technology, and develop a prototype for automation.
+
+5- Iteration, Testing, and Feedback: Iterate on the solution, thoroughly test, and gather feedback for improvements.
+
+6- Documentation, Training, and Implementation: Document the process, train the team, and gradually implement the automated solution.
+
+7- Monitoring, Maintenance, and Optimization: Set up monitoring, address issues, and establish a maintenance plan. Continuously optimize based on user feedback.
+
+8- Scale and Review: Consider scaling the solution, update documentation, and conduct a post-implementation review for lessons learned.
+
+
+**Q3**
+
+```{r}
+library(dslabs)
+library(ggplot2)
+
+results_us_election_2016$clinton_percent <- results_us_election_2016$clinton / 100
+results_us_election_2016$trump_percent <- results_us_election_2016$trump / 100
+results_us_election_2016$others_percent <- results_us_election_2016$others / 100
+
+
+set.seed(42)  # Set seed for reproducibility
+random_states <- sample(results_us_election_2016$state, 20)
+
+df <- results_us_election_2016[results_us_election_2016$state %in% random_states, ]
+
+df_melted <- reshape2::melt(df, id.vars = c("state", "electoral_votes"))
+
+ggplot(df_melted, aes(x = state, y = value, fill = variable)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(title = "2016 US Election Results in 20 Randomly Selected States",
+       x = "State",
+       y = "Percentage of Votes") +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_x_discrete(limits = random_states)  # Set x-axis limits to the 20 random states
+```
+
+Given the existing code and the context of the dataset, a suitable graph to visualize the 2016 US election results in 20 randomly selected states would be a grouped bar plot representing the percentage of votes for each candidate (Clinton, Trump, and Others) in each state. This type of graph allows for a clear comparison of vote percentages across candidates within each state. (Randomly selected states may be representative of geographic and demographic differences. Therefore, by focusing on the election results in these states, we can better understand the political trends of a particular region or region. Of course, we can do it by adding all the states.) 
+
+A grouped bar plot is chosen because it allows for a straightforward comparison of the percentage of votes for each candidate within each state. Each bar represents a state, and the bars are grouped by candidate, making it easy to observe the variations in vote percentages across states.
+The output will be a grouped bar plot with bars for each state, showing the percentage of votes for Clinton, Trump, and Others, providing a clear visual comparison.
+
+
+# **Part 2**
+
+
+ SC184*** mean math score, mean read score and mean sci score "Does your school offer professional development to
+# science teachers in any of the following?
+#pisa$SC184Q01JA # 1Yes 2No
+# set 1 as yes and 2 as no
+pisa_SC184Q01JA <- pisa %>% mutate(SC184Q01JA = ifelse(SC184Q01JA == 1, "Yes", "No"))
+# drp the NA 
+pisa_SC184Q01JA <- pisa_SC184Q01JA %>% filter(!is.na(SC184Q01JA))
+professional_development_to_science_teachers <- pisa_SC184Q01JA %>% group_by(SC184Q01JA) %>%
+summarise(mean_sci = mean(mean_sci, na.rm = TRUE))
+line plot normalize the data
+ggplot(professional_development_to_science_teachers, aes(x = SC184Q01JA, y = mean_sci)) +
+    geom_bar(stat = "identity", fill = "#dda0dd") +
+    labs(title = "Mean Science Score by Professional Development to Science Teachers",
+         x = "Professional Development to Science Teachers",
+         y = "Mean Sci Score") +
+    theme_bw() +
+    theme(plot.title = element_text(hjust = 0.5))
+
+
+![graph](/Kullanıcılar/github-classroom/pjournal/mef07-ozgenursensoy/sgraph)
+
+
+
+When we checked for math, we obtained more distant bars. However, when I checked for science, I noticed that the bars were closer.
+
+Supporting the impact of professional development argues that well-designed programs can enhance teachers' content knowledge, instructional strategies, and classroom management skills. These improvements, in turn, are expected to positively influence student engagement, understanding, and achievement in science. Investing in ongoing teacher development contributes to a more dynamic and effective learning environment.
+
+In conclusion, the relationship between professional development for teachers and students' science performance is multifaceted and nuanced. While some argue for the positive impact of well-implemented programs on teacher effectiveness and subsequently on student outcomes, others highlight the need for a more tailored and context-specific approach to professional development. Further research and exploration into the specific elements that contribute to the success or lack thereof in science education are essential to provide more conclusive insights into this complex relationship.
+
+
+# **Part 3**
+
+I received data for 1-30 November 2023. By editing this data, I included power plants with a capacity of 1000 and above. I used the average of the installed power and capacity data of these power plants during the event.
+
+- The graph shows that, in general, the installed power values in the enterprise are quite close to each other. However, there is a larger variation in capacity values during the event.
+
+- High Installed Power, Low Capacity: For example, although power plants such as "SOMA-B THERMAL POWER PLANT" and "ILISU DAM and HEPP" have high installed capacity, their capacities are quite low during the incident. This may mean that these power plants are not able to use their full potential capacity.
+
+- Low Installed Power and High Capacity: On the other hand, some power plants may have low installed powers, but they can reach higher capacities during the event.
+
+- Capacity Variability During the Incident: A significant variability is observed in the capacities of power plants such as "SİLOPİ TES", "KARAKAYA HEPP" and "ATATÜRK HEPP" during the incident. These power plants probably have flexible operating capacity and can quickly adapt to needs.
+
+```{r}
+santral_isimleri <- c("ATATÜRK HES", "KARAKAYA HES", "AFŞİN ELBİSTAN-B TS", "KEBAN HES", "ILISU BARAJI ve HES", 
+                   "SOMA-B TERMİK SANTRAL", "ENERJISA BANDIRMA SANTRALI", "ACWA POWER KIRIKKALE DGKÇS", 
+                   "Erzin DGKÇ Santrali", "ANKARA DGKÇS", "ADAPAZARI DGKÇS", "İSTANBUL FUEL OİL VE DOĞALGAZ KOMBİNE ÇEVRİM SANTRALİ (B)", 
+                   "GEBZE DGKÇS", "BURSA DGKÇS", "CENAL TES", "İSKENDERUN İTHAL KÖMÜR SANTRALI", "ÇAYIRHAN TES", "HAMİTABAT DG", 
+                   "BANDIRMA II DGKÇS", "Bekirli Termik Santralı", "SOMA KOLİN TERMİK SANTRALİ(Linyit)", 
+                   "TEKİRDAĞ DGKÇS_A(Doğalgaz/Motorin)", "ÇETİN BARAJI ve HES", "YENİKÖY TES", "KAZAN DOĞALGAZ KOJ.SANT.", 
+                   "İZDEMİR TES", "AFŞİN ELBİSTAN A TERMİK SANTRALİ", "EREN ENERJİ TERMİK SANTRALİ ZONGULDAK", 
+                   "SEYİTÖMER TES", "SİLOPİ TES", "KEMERKÖY ÜRETİM TESİSİ", "YATAĞAN TERMİK SANTRALİ", 
+                   "ORHANELİ TES", "KAVŞAK BENDİ ve HES", "TUNÇBİLEK TES", "Çatalağzı Termik Santralı", 
+                   "MANİSA OSB ÜRT.SANT.", "ENERJİSA TUFANBEYLİ SANTRALI", "YUNUS EMRE TERMİK SANTRALİ", 
+                   "BALIKESİR RES", "BOLU-GÖYNÜK ENERJİ SANTRALİ")
+
+kurulu_guc <- c(2405, 1800, 1440, 1330, 1208.6, 990, 930.8, 927.4, 904, 833.2, 818, 816, 815.5, 716, 660, 654, 620, 610, 607.2,600, 510, 478, 420.1, 420, 379, 370, 338.75, 335.3333333, 334.0909091, 243, 224.0275862, 210, 210, 191.28, 
+184.7674419, 157.34, 150.08, 150, 145, 142.5, 135)
+
+kapasite <- c(1650, 840, 216.7307692, 904.5, 162.8813559, 404.4444444, 442, 247.2142857, 430.5, 281.8636364, 418, 
+                   453.3214286, 414.0625, 254.3333333, 465.6, 238.8888889, 250.2941176, 0, 465.5, 381.8965517, 365.1666667, 
+                   0, 209.7, 261.5714286, 0, 99.2, 0, 244.2666667, 241.5681818, 48, 174.5862069, 128.9090909, 89.77142857, 
+                   103, 46.41860465, 64.90697674, 37.17647059, 109, 27.72727273, 97.42857143, 62.02173913)
+
+
+veri <- data.frame(SantralIsmi = santral_isimleri, KuruluGuc = kurulu_guc, Kapasite = kapasite)
+
+
+library(ggplot2)
+ggplot(veri, aes(x = SantralIsmi)) +
+  geom_bar(aes(y = KuruluGuc), stat = "identity", fill = "blue", position = "dodge", width = 0.35) +
+  geom_bar(aes(y = Kapasite), stat = "identity", fill = "green", position = "dodge", width = 0.35) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "Santral İsimleri, İşletmedeki Kurulu Güç ve Olay Sırasında Kapasite", x = "Santral İsmi", y = "Değer") +
+  scale_fill_manual(values = c("blue", "green"), name = "Değer Tipi", labels = c("İşletmedeki Kurulu Güç", "Olay Sırasında Kapasite"))
+```
+
+
+
+
+
+

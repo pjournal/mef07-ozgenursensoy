@@ -9,7 +9,7 @@ editor: visual
 
 EasyPark tackles urban traffic congestion and driver frustration by optimizing parking. With 30% of city vehicles searching for parking, EasyPark enhances the urban parking experience using mathematical optimization.
 
-\*\*Problem\*\*
+**Problem**
 
 Cruising for parking worsens congestion, wastes time and fuel, and increases carbon emissions. Traditional parking methods fail to address drivers' challenges, causing delays and urban gridlock.
 
